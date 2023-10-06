@@ -1,4 +1,3 @@
-n = 7
 
 
 def factorial(n):
@@ -8,5 +7,7 @@ def factorial(n):
         return n * factorial(n - 1)
 
 
+n = (input("N = "))
+n = int(n)
 factorial(n)    # 120
-print(n)
+print(factorial(n))
