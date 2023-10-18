@@ -11,5 +11,4 @@ os.startfile("C:/Users/grebe/AppData/Roaming/Telegram Desktop/Telegram.exe")
 
 time.sleep(1)
 
-os.startfile(
-    "C:/Users/grebe/AppData/Local/RingCentral/SoftPhoneApp/Softphone.exe")
+os.startfile("C:/Users/grebe/AppData/Local/RingCentral/SoftPhoneApp/Softphone.exe")

@@ -42,6 +42,7 @@ while True:
         break
 
     move = input('Enter direction (u | d | l | r): ')
+
     if move == 'u' and char_y > 0:
         char_y -= 1
     elif move == 'd' and char_y < SIZE_Y - 1:

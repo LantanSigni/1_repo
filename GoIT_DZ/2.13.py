@@ -13,19 +13,19 @@ for ch in message:
             ch = "S"
         encoded_message += ch
     elif ch:
-        pos = 0
+    pos = 0
 
-        pos = ord(ch) - ord('a')
-        # print(ord(ch))
-        # print(f'Зсув відносно а = {pos}')
+    pos = ord(ch) - ord('a')
+    # print(ord(ch))
+    # print(f'Зсув відносно а = {pos}')
 
-        pos = (pos + offset) % 26
-        # print(f'Позиція після зсуву {offset} тепер {pos}')
+    pos = (pos + offset) % 26
+    # print(f'Позиція після зсуву {offset} тепер {pos}')
 
-        ch = chr(pos + ord('a'))
-        # print(f'Нова буква {ch}')
+    ch = chr(pos + ord('a'))
+    # print(f'Нова буква {ch}')
 
-        encoded_message += ch
+    encoded_message += ch
 
 print(encoded_message)
 
