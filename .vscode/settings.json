@@ -2,5 +2,7 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
-  "python.formatting.provider": "none"
+  "python.formatting.provider": "none",
+  "codegpt.apiKey": "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",
+  "codegpt.model": "text-davinci-003"
 }
