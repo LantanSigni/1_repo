@@ -17,3 +17,13 @@ print(result)
 result = search(
     url_regexp, 'Here you can find some info: https://www.google.com Take care!')
 print(result)
+# (29, 51)
+print(result.span())
+
+my_simple_regexp = r'.\d'
+# span=(0, 2) - only 1 result
+result = search(my_simple_regexp, 'a1  asd  10')
+# ['a1', '1'] - 2 results now
+result = findall(my_simple_regexp, 'a1  asd  10')
+# '*  asd *0' - substitute tuple above for *
+print(sub(my_simple_regexp, '*', 'a1  asd  10'))
