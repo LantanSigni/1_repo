@@ -14,8 +14,8 @@ def find_word(text, word):
         return search
 
 
-text = 'Did you train your dragon?'
-word = 'dragon'
+# text = 'Did you train your dragon?'
+# word = 'dragon'
 
 result = find_word(text, word)
 print(result)
