@@ -4,5 +4,6 @@
   },
   "python.formatting.provider": "none",
   "codegpt.apiKey": "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",
-  "codegpt.model": "text-davinci-003"
+  "codegpt.model": "text-davinci-003",
+  "python.analysis.typeCheckingMode": "basic"
 }
