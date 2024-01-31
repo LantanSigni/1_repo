@@ -9,13 +9,13 @@ class User:
         print(f'Hi, my login is {self.login}.')
 
 
-if __name__ == '__main__':  # перевірка класу User.
-    alice = User()
-    alice.greet()  # Hi, my login is Guest
+# if __name__ == '__main__':  # перевірка класу User.
+#     alice = User()
+#     alice.greet()  # Hi, my login is Guest
 
-    bob = User()
-    bob.login = "Bob"
-    bob.greet()  # Hi, my login is Bob
+#     bob = User()
+#     bob.login = "Bob"
+#     bob.greet()  # Hi, my login is Bob
 
 
 class AuthenticatedUser(User):
@@ -33,21 +33,21 @@ class AuthenticatedUser(User):
             return False
 
 
-if __name__ == '__main__':  # перевірка класу AuthenticatedUser.
+# if __name__ == '__main__':  # перевірка класу AuthenticatedUser.
 
-    alice = AuthenticatedUser()
-    alice.greet()  # Hi, my login is Guest
-    is_alice = alice.authenticate("password")
-    # Is 'alice' a default AuthenticatedUser: True
-    print(f"Is 'alice' a default AuthenticatedUser: {is_alice}")
+#     alice = AuthenticatedUser()
+#     alice.greet()  # Hi, my login is Guest
+#     is_alice = alice.authenticate("password")
+#     # Is 'alice' a default AuthenticatedUser: True
+#     print(f"Is 'alice' a default AuthenticatedUser: {is_alice}")
 
-    bob = AuthenticatedUser()
-    bob.login = "Bob"
-    bob.password = "uNc1e"
-    bob.greet()  # Hi, my login is Bob
-    is_bob = bob.authenticate("password")
-    # Is 'bob' a default AuthenticatedUser: False
-    print(f"Is 'bob' a default AuthenticatedUser: {is_bob}")
+#     bob = AuthenticatedUser()
+#     bob.login = "Bob"
+#     bob.password = "uNc1e"
+#     bob.greet()  # Hi, my login is Bob
+#     is_bob = bob.authenticate("password")
+#     # Is 'bob' a default AuthenticatedUser: False
+#     print(f"Is 'bob' a default AuthenticatedUser: {is_bob}")
 
 
 class AccessObject:
@@ -61,11 +61,12 @@ class AccessObject:
 
     def change_owner(self, old_owner_password, new_owner):
         '''Метод передачі прав доступу від користувача до іншого користувача.
-        Проводить перевірку належності обох користувачів до зареєстрованих користувачів та
-        співпадіння вказаного паролю до паролю попереднього власника доступу.
-        При проходженні всіх перевірок, назначається новий власник прав доступу'''
-        if (self.owner.authenticate(old_owner_password) and
-                isinstance(self.owner, AuthenticatedUser)):
+        Спростив. Тепер працює перевірка методом, запозиченим з класу AuthenticatedUser.
+        Порівнюється пароль овнера об'єкта з введеним паролем.
+        Якщо вони співпадають - призначається новий власник.
+        Просто Юзер не зможе стати власником, так як він не має методу автентифікації,
+        який має тільки АтвентЮзер!'''
+        if self.owner.authenticate(old_owner_password):
             self.owner = new_owner
             print(f'The ownership changing of {
                 self.name} was successful! New owner is {self.owner.login}.')
@@ -94,3 +95,27 @@ if __name__ == '__main__':  # Перевірка класу AccessObject.
 
     log.change_owner(bob.password, bob)
     security_policy.change_owner(bob.password, alice)
+
+# if __name__ == '__main__':  # перевірка класу User.
+#     alice = User()
+#     alice.greet()  # Hi, my login is Guest
+
+#     bob = User()
+#     bob.login = "Bob"
+#     bob.greet()  # Hi, my login is Bob
+
+# if __name__ == '__main__':  # перевірка класу AuthenticatedUser.
+
+#     alice = AuthenticatedUser()
+#     alice.greet()  # Hi, my login is Guest
+#     is_alice = alice.authenticate("password")
+#     # Is 'alice' a default AuthenticatedUser: True
+#     print(f"Is 'alice' a default AuthenticatedUser: {is_alice}")
+
+#     bob = AuthenticatedUser()
+#     bob.login = "Bob"
+#     bob.password = "uNc1e"
+#     bob.greet()  # Hi, my login is Bob
+#     is_bob = bob.authenticate("password")
+#     # Is 'bob' a default AuthenticatedUser: False
+#     print(f"Is 'bob' a default AuthenticatedUser: {is_bob}")
