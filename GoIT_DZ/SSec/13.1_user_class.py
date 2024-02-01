@@ -68,11 +68,11 @@ class AccessObject:
         який має тільки АтвентЮзер!'''
         if self.owner.authenticate(old_owner_password):
             self.owner = new_owner
-            print(f'The ownership changing of {
-                self.name} was successful! New owner is {self.owner.login}.')
+            print(f'The ownership changing of {self.name} '
+                  f'was successful! New owner is {self.owner.login}.')
         else:
-            print(f'Unauthorised attempt of {
-                  self.name} owner changing detected!.')
+            print(f'Unauthorised attempt of {self.name} '
+                  f'owner changing detected!.')
 
 
 if __name__ == '__main__':  # Перевірка класу AccessObject.
