@@ -21,14 +21,18 @@ class RandomGenerator:
 
 if __name__ == '__main__':
     try:
-        generator = RandomGenerator(256)
+        generator = RandomGenerator(42)
     except Exception as e:
         print(f'Exception occured! {e.args[0]}')
 
-    with open("secret.txt", 'w') as secret:
-        file_content = secret.write(
-            'The quick brown fox jumps over the lazy dog')
-
-    with open("secret.txt", 'r') as secret:
+    with open("secret.txt") as secret:
         file_content = secret.read()
-        print(file_content)
+        secret_length = len(file_content)
+
+    with open("secret.txt", 'wb+') as secret:
+        for i in range(10):
+            mask = generator.get_rand().to_bytes(
+                1, 'big', signed=False)  # переведення в байти
+            secret.seek(0)
+            for j in range(0, secret_length):
+                secret.write(mask)
