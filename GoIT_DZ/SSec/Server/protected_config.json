@@ -1,0 +1,17 @@
+{
+  "attemts": 3,
+  "users": [
+    {
+      "login": "gAAAAABlyoXpEM_OF4bhhrzyE1sEVynt7XH5a7YMfNq6VtZYHaWTMwL7BzBfs35af_n7wTUaTvlhHdstbslkV-G50tfb40g0zw==",
+      "password": "gAAAAABlyoXpeKDtgsGMt9pVipiZbcwV4o60ilegqtUQCUOrnx76IHhj_ZzDMoJDJiA0TDpAnMzfVtRUhXUD8fIwYPRGv-dkrQ=="
+    },
+    {
+      "login": "gAAAAABlyoXpIU8qlJIaLSzOIJrnQxrs8syl0VDL-pKmJkb8ctvHtnCL7EWPFtywhrjH7pmukH6h3FFB_4PDS2OzLqj70FsmmQ==",
+      "password": "gAAAAABlyoXpZXyNUE_nTpTvI-c0-rESQyzoMrW5gU6rJ8k2SqrnwmzXmXioPwBbfyuE7JlHmgOkVM2NK3bL87_j0r-fVmFFNg=="
+    },
+    {
+      "login": "gAAAAABlyoXpag8AY5_hD-nO0lijeDO3oV476wDdCEkbvYyjCN7z-7Y3TEB3xCPx_zZeOcftrSn2OjIm0IyBClprRpL-jhqmlg==",
+      "password": "gAAAAABlyoXp_6eJ2zCgc3bCwS9aA3KngwkBEIligdfQvtcRhMjsmuk9fc1e7IE30xYyZroVuvbK-e_1YG--_f7y9o6QayMh9Q=="
+    }
+  ]
+}
